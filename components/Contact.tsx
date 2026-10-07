@@ -13,6 +13,7 @@ export default function Contact() {
 
         <div className="grid gap-14 lg:grid-cols-2">
 
+          {/* LEFT SIDE */}
           <div>
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-orange-500">
               Contact Us
@@ -34,11 +35,14 @@ export default function Contact() {
 
             <div className="mt-10 space-y-5">
 
+              {/* OPERATIONS MANAGER */}
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm">
-                  <Contact2Icon size={20} className="text-orange-500" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+                  <Contact2Icon
+                    size={20}
+                    className="text-orange-500"
+                  />
                 </div>
-                
 
                 <div>
                   <p className="text-xs uppercase tracking-wider text-gray-400">
@@ -51,42 +55,59 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm">
-                  <Phone size={20} className="text-orange-500" />
+              {/* PHONE */}
+              <a
+                href="tel:+97477505255"
+                className="group flex items-center gap-4"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm transition-all duration-300 group-hover:shadow-md">
+                  <Phone
+                    size={20}
+                    className="text-orange-500 transition-transform duration-300 group-hover:scale-110"
+                  />
                 </div>
-                
 
                 <div>
                   <p className="text-xs uppercase tracking-wider text-gray-400">
                     Phone
                   </p>
 
-                  <p className="font-semibold">
+                  <p className="font-semibold transition-colors group-hover:text-orange-500">
                     +974 7750 5255
                   </p>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm">
-                  <Mail size={20} className="text-orange-500" />
+              {/* EMAIL */}
+              <a
+                href="mailto:nasser.edrees@optimizedservices.com.qa"
+                className="group flex items-center gap-4"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm transition-all duration-300 group-hover:shadow-md">
+                  <Mail
+                    size={20}
+                    className="text-orange-500 transition-transform duration-300 group-hover:scale-110"
+                  />
                 </div>
 
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs uppercase tracking-wider text-gray-400">
                     Email
                   </p>
 
-                  <p className="font-semibold">
+                  <p className="break-all font-semibold transition-colors group-hover:text-orange-500">
                     nasser.edrees@optimizedservices.com.qa
                   </p>
                 </div>
-              </div>
+              </a>
 
+              {/* LOCATION */}
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm">
-                  <MapPin size={20} className="text-orange-500" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+                  <MapPin
+                    size={20}
+                    className="text-orange-500"
+                  />
                 </div>
 
                 <div>
@@ -103,10 +124,12 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* CONTACT FORM */}
           <div className="rounded-[2rem] bg-black p-7 sm:p-10">
 
             <form className="space-y-5">
 
+              {/* NAME */}
               <div>
                 <label className="mb-2 block text-sm text-white/60">
                   Name
@@ -114,11 +137,14 @@ export default function Contact() {
 
                 <input
                   type="text"
+                  name="name"
                   placeholder="Your name"
-                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-white/25 focus:border-orange-500"
+                  required
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-white/25 transition-colors focus:border-orange-500"
                 />
               </div>
 
+              {/* EMAIL */}
               <div>
                 <label className="mb-2 block text-sm text-white/60">
                   Email
@@ -126,11 +152,14 @@ export default function Contact() {
 
                 <input
                   type="email"
+                  name="email"
                   placeholder="you@example.com"
-                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-white/25 focus:border-orange-500"
+                  required
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-white/25 transition-colors focus:border-orange-500"
                 />
               </div>
 
+              {/* PHONE */}
               <div>
                 <label className="mb-2 block text-sm text-white/60">
                   Phone
@@ -138,32 +167,37 @@ export default function Contact() {
 
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="+974"
-                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-white/25 focus:border-orange-500"
+                  className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-white/25 transition-colors focus:border-orange-500"
                 />
               </div>
 
+              {/* MESSAGE */}
               <div>
                 <label className="mb-2 block text-sm text-white/60">
                   Message
                 </label>
 
                 <textarea
+                  name="message"
                   rows={5}
                   placeholder="Tell us how we can help..."
-                  className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-white/25 focus:border-orange-500"
+                  required
+                  className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-white outline-none placeholder:text-white/25 transition-colors focus:border-orange-500"
                 />
               </div>
 
+              {/* SEND */}
               <button
                 type="submit"
-                className="group flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 px-6 py-4 font-semibold text-white"
+                className="group flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 px-6 py-4 font-semibold text-white transition-all duration-300 hover:scale-[1.01] hover:shadow-lg hover:shadow-orange-500/20"
               >
                 Send Inquiry
 
                 <ArrowUpRight
                   size={18}
-                  className="transition-transform group-hover:rotate-45"
+                  className="transition-transform duration-300 group-hover:rotate-45"
                 />
               </button>
 

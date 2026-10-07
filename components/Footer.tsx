@@ -1,12 +1,13 @@
 import {
   ArrowUpRight,
   Leaf,
+  Mail,
+  Phone,
 } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-[#111111] text-white">
-
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
 
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
@@ -86,25 +87,48 @@ export default function Footer() {
 
           {/* CONTACT */}
           <div>
-
             <h3 className="font-semibold text-white">
               Get In Touch
             </h3>
 
-            <div className="mt-5 space-y-3 text-sm text-white/40">
+            <div className="mt-5 space-y-4 text-sm">
 
-              <p>
+              {/* LOCATION */}
+              <p className="text-white/40">
                 Doha, Qatar
               </p>
 
-              <p>
-                +974 7750 5255
-              </p>
+              {/* PHONE */}
+              <a
+                href="tel:+97477505255"
+                className="group flex items-center gap-3 text-white/40 transition-colors hover:text-orange-500"
+              >
+                <Phone
+                  size={16}
+                  className="shrink-0 transition-transform duration-300 group-hover:scale-110"
+                />
 
-              <p>
-                nasser.edrees@optimizedservices.com.qa
-              </p>
+                <span>
+                  +974 7750 5255
+                </span>
+              </a>
 
+              {/* EMAIL */}
+              <a
+                href="mailto:nasser.edrees@optimizedservices.com.qa"
+                className="group flex items-center gap-3 break-all text-white/40 transition-colors hover:text-orange-500"
+              >
+                <Mail
+                  size={16}
+                  className="shrink-0 transition-transform duration-300 group-hover:scale-110"
+                />
+
+                <span>
+                  nasser.edrees@optimizedservices.com.qa
+                </span>
+              </a>
+
+              {/* CONTACT BUTTON */}
               <a
                 href="#contact"
                 className="group mt-5 inline-flex items-center gap-2 font-medium text-white transition-colors hover:text-orange-500"
@@ -118,7 +142,6 @@ export default function Footer() {
               </a>
 
             </div>
-
           </div>
 
         </div>
@@ -142,7 +165,6 @@ export default function Footer() {
         </div>
 
       </div>
-
     </footer>
   );
 }
