@@ -98,11 +98,11 @@ export default function Footer() {
               </p>
 
               <p>
-                +974 XX XXX XXXX
+                +974 7750 5255
               </p>
 
               <p>
-                info@example.com
+                nasser.edrees@optimizedservices.com.qa
               </p>
 
               <a
