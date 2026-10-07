@@ -156,10 +156,6 @@ export default function Footer() {
               Transportation. All rights reserved.
             </p>
 
-            <p>
-              Built with purpose.
-            </p>
-
           </div>
 
         </div>
